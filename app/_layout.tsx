@@ -5,6 +5,7 @@ import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import { LogBox } from "react-native";
 import { configureReanimatedLogger } from "react-native-reanimated";
+
 import { tokenCache } from "@/lib/auth";
 
 if (__DEV__) {
