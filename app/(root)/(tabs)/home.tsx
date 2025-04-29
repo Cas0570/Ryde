@@ -32,13 +32,11 @@ const Home = () => {
     router.replace("/(auth)/sign-in");
   };
 
-  const [hasPermission, setHasPermission] = useState<boolean>(false);
+  const [, setHasPermission] = useState<boolean>(false);
 
-  const {
-    data: recentRides,
-    loading,
-    error,
-  } = useFetch<Ride[]>(`/(api)/ride/${user?.id}`);
+  const { data: recentRides, loading } = useFetch<Ride[]>(
+    `/(api)/ride/${user?.id}`,
+  );
 
   useEffect(() => {
     (async () => {
@@ -61,7 +59,7 @@ const Home = () => {
         address: `${address[0].name}, ${address[0].region}`,
       });
     })();
-  }, []);
+  }, [setUserLocation]);
 
   const handleDestinationPress = (location: {
     latitude: number;
