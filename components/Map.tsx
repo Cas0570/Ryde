@@ -57,14 +57,7 @@ const Map = () => {
         setDrivers(drivers as MarkerData[]);
       });
     }
-  }, [
-    markers,
-    destinationLatitude,
-    destinationLongitude,
-    setDrivers,
-    userLatitude,
-    userLongitude,
-  ]);
+  }, [markers, destinationLatitude, destinationLongitude]);
 
   const region = calculateRegion({
     userLatitude,
@@ -93,7 +86,6 @@ const Map = () => {
       className="w-full h-full rounded-2xl"
       tintColor="black"
       mapType="mutedStandard"
-      showsPointsOfInterest={false}
       initialRegion={region}
       showsUserLocation={true}
       userInterfaceStyle="light"
