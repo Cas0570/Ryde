@@ -37,6 +37,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": "https://ryde.dev/"
+      },
+      "eas": {
+        "projectId": "1d6206e9-4681-4822-91ca-d2c62f8e3fee"
+      }
     }
   }
 }
